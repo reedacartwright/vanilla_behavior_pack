@@ -31,12 +31,11 @@
       "minecraft:ranged_attack": {
         "minecraft:behavior.ranged_attack": {
           "priority": 4,
-          "attack_interval_min": 1,
-          "attack_interval_max": 1,
-          "attack_radius": 8
+          "attack_interval_min": 1.0,
+          "attack_interval_max": 1.0,
+          "attack_radius": 8.0
         },
         "minecraft:shooter": {
-          "type": "Arrow",
           "def": "minecraft:arrow"
         },
         "minecraft:environment_sensor": {
@@ -54,8 +53,6 @@
       "minecraft:melee_attack": {
         "minecraft:behavior.melee_attack": {
           "priority": 4,
-          "target_dist": 1.2,
-          "speed_multiplier": 1,
           "track_target": true
         },
         "minecraft:attack": {
@@ -132,6 +129,14 @@
               "target": "other"
             }
           }
+        },
+        "minecraft:on_hurt": {
+          "event": "minecraft:ranged_mode",
+          "target": "self"
+        },
+        "minecraft:on_hurt_by_player": {
+          "event": "minecraft:ranged_mode",
+          "target": "self"
         }
       },
       "minecraft:patrol_captain": {
@@ -297,8 +302,10 @@
       },
       "minecraft:behavior.nearest_attackable_target": {
         "priority": 2,
-        "within_radius": 16.0,
+        "must_see": true,
         "reselect_targets": true,
+        "within_radius": 16.0,
+
         "entity_types": [
           {
             "filters": {
@@ -319,8 +326,7 @@
             },
             "max_dist": 16
           }
-        ],
-        "must_see": true
+        ]
       },
       "minecraft:behavior.random_stroll": {
         "priority": 7,
@@ -376,6 +382,7 @@
       "minecraft:spawn_as_illager_captain": {
         "add": {
           "component_groups": [
+            "minecraft:ranged_attack",
             "minecraft:illager_squad_captain"
           ]
         }

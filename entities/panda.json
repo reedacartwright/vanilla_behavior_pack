@@ -123,9 +123,8 @@
         },
         "minecraft:behavior.melee_attack": {
           "priority": 2,
-          "target_dist": 1.2,
-          "track_target": true,
           "attack_once": true,
+          "track_target": true,
           "reach_multiplier": 1.0
         }
       },
@@ -186,7 +185,6 @@
                 "value": "panda"
               },
               "max_dist": 16,
-              "walk_speed_multiplier": 1.0,
               "sprint_speed_multiplier": 1.5
             }
           ]
@@ -271,7 +269,6 @@
         },
         "minecraft:behavior.melee_attack": {
           "priority": 2,
-          "target_dist": 1.2,
           "track_target": true,
           "reach_multiplier": 1.0
         },
@@ -444,6 +441,7 @@
         "speed_multiplier": 1.25
       },
       "minecraft:balloonable": {
+		"mass": 1.5
       },
       "minecraft:rideable": {
         "seat_count": 1,
