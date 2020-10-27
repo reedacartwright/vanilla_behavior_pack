@@ -1,5 +1,5 @@
 {
-  "format_version": "1.13.0",
+  "format_version": "1.16.0",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:salmon",
@@ -99,6 +99,12 @@
       "minecraft:pushable": {
         "is_pushable": true,
         "is_pushable_by_piston": true
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": { 
+          "min_distance": 32,
+          "max_distance": 40
+        }
       },
       "minecraft:behavior.avoid_mob_type": {
         "priority": 1,

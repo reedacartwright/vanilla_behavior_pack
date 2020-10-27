@@ -1,5 +1,5 @@
 {
-  "format_version": "1.13.0",
+  "format_version": "1.16.0",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:fox",
@@ -447,6 +447,8 @@
         "totalSupply": 15,
         "suffocateTime": 0
       },
+      "minecraft:equip_item": {
+      },
       "minecraft:navigation.walk": {
         "can_path_over_water": true,
         "avoid_water": true,
@@ -532,8 +534,14 @@
           }
         ]
       },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
       "minecraft:behavior.float": {
         "priority": 0
+      },
+      "minecraft:behavior.equip_item": {
+        "priority": 2
       },
       "minecraft:behavior.avoid_mob_type": {
         "priority": 5,
@@ -553,6 +561,7 @@
               ]
             },
             "max_dist": 10,
+            "walk_speed_multiplier": 1.0,
             "sprint_speed_multiplier": 1.5
           }
         ]

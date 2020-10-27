@@ -1,5 +1,5 @@
 {
-  "format_version": "1.13.0",
+  "format_version": "1.16.0",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:pig",
@@ -182,6 +182,9 @@
       },
       "minecraft:balloonable": {
         "mass": 0.75
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
       },
       "minecraft:behavior.mount_pathing": {
         "priority": 1,
