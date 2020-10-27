@@ -2,24 +2,23 @@
   "format_version": "1.12",
   "minecraft:recipe_shaped": {
     "description": {
-      "identifier": "minecraft:stone_hoe_from_blackstone"
-    },
+    "identifier": "minecraft:brewing_stand_from_blackstone"
+    }, 
     "tags": [ "crafting_table" ],
     "pattern": [
-      "XX",
-      " #",
-      " #"
+      " B ",
+      "###"
     ],
     "key": {
-      "#": {
-        "item": "minecraft:stick"
+      "B": {
+        "item": "minecraft:blaze_rod"
       },
-      "X": {
+      "#": {
         "item": "minecraft:blackstone"
       }
     },
     "result": {
-      "item": "minecraft:stone_hoe"
+      "item": "minecraft:brewing_stand"
     },
     "priority": 2
   }
